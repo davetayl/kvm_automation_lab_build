@@ -1,0 +1,32 @@
+debian:
+    hosts:
+        haproxy01:
+            ansible_host: 10.16.4.80
+        jenkins01:
+            ansible_host: 10.16.4.81
+        mariadb01:
+            ansible_host: 10.16.4.82
+        netbox01:
+            ansible_host: 10.16.4.83
+        ansible01:
+            ansible_host: 10.16.4.84
+haproxy:
+    hosts:
+        haproxy01:
+            ansible_host: 10.16.4.80
+jenkins:
+    hosts:
+        jenkins01:
+            ansible_host: 10.16.4.81
+mariadb:
+    hosts:
+        mariadb01:
+            ansible_host: 10.16.4.82
+netbox:
+    hosts:
+        netbox01:
+            ansible_host: 10.16.4.83
+ansible:
+    hosts:
+        ansible01:
+            ansible_host: 10.16.4.84
