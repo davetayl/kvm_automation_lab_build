@@ -15,3 +15,7 @@ in teh inventory file and run an ansible build.
     - Jenkins host
     - Docker host
     - Netbox host
+
+
+## Resources
+https://www.redhat.com/sysadmin/build-VM-fast-ansible
