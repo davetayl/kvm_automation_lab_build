@@ -1,4 +1,4 @@
-- name: My first play
+- name: Test
   hosts: debian
   tasks:
    - name: Ping my hosts
