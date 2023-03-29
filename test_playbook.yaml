@@ -1,0 +1,7 @@
+- name: Test
+  hosts: test_guests
+  tasks:
+   - name: Print message
+     loop: "{{ hostvars[inventory_hostname][vars] | keys }}"
+     ansible.builtin.debug:
+       msg: "{{ item }}"

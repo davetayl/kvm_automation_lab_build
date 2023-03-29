@@ -1,4 +1,4 @@
-debian:
+lab_guests:
     hosts:
         haproxy01:
             ansible_host: 10.16.4.80

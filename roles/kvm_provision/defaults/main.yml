@@ -4,10 +4,11 @@ base_image_name: debian-11-generic-amd64-20230124-1270.qcow2
 base_image_url: https://cloud.debian.org/images/cloud/bullseye/20230124-1270/{{ base_image_name }}
 base_image_sha: fa152c6159dcb73adb1b573da3631937068c6a465ce7565a16dcce7aebd27c9a62ad783296d408300b99616cad89b8c0092e11df0fc2aa423334d741ac83b1a2
 libvirt_pool_dir: "/media/data/images"
+# Add inventory variable for vm_name and for IP
 vm_name: test01
 vm_vcpus: 2
 vm_ram_mb: 2048
-vm_net: default
+vm_net: br0
 vm_root_pass: ansible
 cleanup_tmp: no
 ssh_key: /root/.ssh/id_rsa.pub
