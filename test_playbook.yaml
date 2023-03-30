@@ -1,7 +1,8 @@
 - name: Test
   hosts: test_guests
+  vars_files:
+    - test_vm.yaml
   tasks:
    - name: Print message
-     loop: "{{ hostvars[inventory_hostname][vars] | keys }}"
      ansible.builtin.debug:
-       msg: "{{ item }}"
+       msg: '{{ vms }}'

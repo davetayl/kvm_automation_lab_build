@@ -2,9 +2,11 @@
   hosts: localhost
   gather_facts: yes
   become: yes
+  vars_files:
+  - test_vm.yaml
   vars:
     pool_dir: "/var/lib/libvirt/images"
-    vm: test01
+#    vm: {{ vm }}
     vcpus: 2
     ram_mb: 2048
     cleanup: no
@@ -17,9 +19,10 @@
         name: kvm_provision
       vars:
         libvirt_pool_dir: "{{ pool_dir }}"
-        vm_name: "{{ vm }}"
+        vm_name: "{{ item }}"
         vm_vcpus: "{{ vcpus }}"
         vm_ram_mb: "{{ ram_mb }}"
         vm_net: "{{ net }}"
         cleanup_tmp: "{{ cleanup }}"
         ssh_key: "{{ ssh_pub_key }}"
+      loop: "{{ vms.keys() }}"
